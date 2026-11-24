@@ -1,0 +1,43 @@
+name: GlassDrop
+options:
+  bundleIdPrefix: app.glassdrop
+  createIntermediateGroups: true
+  deploymentTarget:
+    iOS: "16.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    SWIFT_STRICT_CONCURRENCY: minimal
+    MARKETING_VERSION: "0.1.0"
+    CURRENT_PROJECT_VERSION: "1"
+targets:
+  GlassDrop:
+    type: application
+    platform: iOS
+    deploymentTarget: "16.0"
+    sources:
+      - GlassDrop
+    info:
+      path: GlassDrop/Info.plist
+      properties:
+        CFBundleDisplayName: Glass Drop
+        UILaunchScreen: {}
+        UIRequiresFullScreen: true
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        NSBluetoothAlwaysUsageDescription: 같은 와이파이에 있는 내 노트북을 찾고 연결하려면 블루투스가 필요해요.
+        NSLocalNetworkUsageDescription: 내 노트북 화면을 받으려면 같은 와이파이의 기기와 통신해야 해요.
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: app.glassdrop.client
+        TARGETED_DEVICE_FAMILY: "1,2"
+        GENERATE_INFOPLIST_FILE: NO
